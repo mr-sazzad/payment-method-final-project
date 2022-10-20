@@ -16,7 +16,7 @@ const Navbar = () => {
     color: "black",
   };
   return (
-    <nav className="flex justify-between items-center h-[70px] ">
+    <nav className="flex justify-between items-center h-[70px]">
       <div>
         <img src={logo} alt="logo" className="h-[2rem]" />
       </div>

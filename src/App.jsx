@@ -1,5 +1,5 @@
 import "./App.css";
-import { Billing, Business, CardDeal, Client, CTA, Footer, Hero, Navbar, Testimonials } from './components';
+import { Billing, Business, CardDeal, Client, CTA, Footer, Hero, Navbar, Stats, Testimonials } from './components';
 
 function App() {
 
@@ -10,14 +10,14 @@ function App() {
           < Navbar />
           </div>
       </div>
-      <div className="flex justify-start">
+      <div className="flex justify-start app">
         <div className="max-width-[1280px]">
           < Hero />
         </div>
       </div>
       <div className="flex justify-start">
         <div className="max-width-[1280px]">
-          {/* < Stats /> */}
+          < Stats />
           < Business />
           < Billing />
           < CardDeal />
