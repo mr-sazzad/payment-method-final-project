@@ -15,7 +15,7 @@ function App() {
           < Hero />
         </div>
       </div>
-      <div className="flex justify-start">
+      <div className="flex justify-start app">
         <div className="max-width-[1280px]">
           < Stats />
           < Business />
