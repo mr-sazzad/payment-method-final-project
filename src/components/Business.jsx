@@ -1,49 +1,10 @@
 import React from "react";
-import send from "../assets/Send.svg";
-import shield from "../assets/shield.svg";
-import star from "../assets/Star.svg";
+import features from "../statistic/Statistic";
 import Button from "./Button";
 
 const Business = () => {
-  const features = [
-    {
-      id: "feature-1",
-      icon: star,
-      title: "Rewards",
-      content:
-        "The best credit cards offer some tantalizing combinations of promotions and prizes",
-    },
-    {
-      id: "feature-2",
-      icon: shield,
-      title: "100% Secured",
-      content:
-        "We take proactive steps make sure your information and transactions are secure.",
-    },
-    {
-      id: "feature-3",
-      icon: send,
-      title: "Balance Transfer",
-      content:
-        "A balance transfer credit card can save you a lot of money in interest charges.",
-    },
-  ];
-
-    const FeatureCard = ({icon, title, content, index}) => {
-    <div className="flex flex-row justify-center items-center">
-      <div className={`${index === features.length -1 ? "mb-0" : "mb-10"}`}>
-            <img src={icon} alt="icon" className="w-[50%] h-[50%]object-contain"/>
-            <div>
-                <h2>{title}</h2>
-                <p>{content}</p>
-            </div>
-        </div>
-        
-    </div>;
-  };
-
   return (
-    <div className="flex md:flex-row flex-col p-6 md:p-10">
+    <div className="flex flex-col md:flex-row p-6 md:p-10">
       <div>
         <h2 className="text-[48px] font-semibold text-start leading-[80px]">
           You do the business, <br className="hidden md:block" /> we’ll handle
@@ -57,9 +18,25 @@ const Business = () => {
         <Button style={`mt-10 `} />
       </div>
       <div>
-        {features.map((feature, index) => {
-          <FeatureCard key={feature.id} {...feature} index={index} />
-        })}
+        {features.map((feature, index) => (
+          <div
+            className={`flex flex-row justify-center items-center ${
+              index === features.length - 1 ? "mb-0" : "mb-10"
+            } p-6 rounded-[20px] mt-10 md:mt-0 feature-card cursor-pointer`}
+          >
+            <div className="w-[64px] h-[60px] flex justify-center items-center bg-dimBlue mr-3 rounded-full">
+              <img
+                src={feature.icon}
+                alt="icon"
+                className="w-[50%] h-[50%] object-contain"
+              />
+            </div>
+            <div className="">
+              <h2>{feature.title}</h2>
+              <p>{feature.content}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
