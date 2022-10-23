@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const Business = () => {
   return (
-    <div className="flex flex-col md:flex-row p-6 md:p-10">
+    <div className="flex flex-col md:flex-row justify-center items-center p-6 md:p-10">
       <div>
         <h2 className="text-[48px] font-semibold text-start leading-[80px]">
           You do the business, <br className="hidden md:block" /> we’ll handle
@@ -24,16 +24,16 @@ const Business = () => {
               index === features.length - 1 ? "mb-0" : "mb-10"
             } p-6 rounded-[20px] mt-10 md:mt-0 feature-card cursor-pointer`}
           >
-            <div className="w-[64px] h-[60px] flex justify-center items-center bg-dimBlue mr-3 rounded-full">
+            <div className="w-[64px] h-[64px] flex justify-center items-center bg-dimBlue mr-3 rounded-full">
               <img
                 src={feature.icon}
                 alt="icon"
                 className="w-[50%] h-[50%] object-contain"
               />
             </div>
-            <div className="">
-              <h2>{feature.title}</h2>
-              <p>{feature.content}</p>
+            <div className="flex flex-col">
+              <h2 className="text-[18] font-semibold leading-[23px]" style={{letterSpacing: '0.01em'}}>{feature.title}</h2>
+              <p className="text-[16px] leading-[24px] font-normal paragraph-color">{feature.content}</p>
             </div>
           </div>
         ))}

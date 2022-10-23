@@ -143,3 +143,7 @@
 .bg-dimBlue {
   background: rgba(9, 151, 124, 0.1);
 }
+
+.paragraph-color {
+  color: rgba(255, 255, 255, 0.7);
+}
